@@ -488,7 +488,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &662819329
 MonoBehaviour:
@@ -503,6 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddle: {fileID: 2066114660}
+  launchVelocity: {x: 2, y: 10}
 --- !u!1 &672246193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,7 +1216,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &2066114658
 PolygonCollider2D:
@@ -1282,5 +1283,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenWidthInUnit: 8
-  minScreenXPositionInUnit: 1
-  maxScreenXPositionInUnit: 7
+  minScreenXPositionInUnit: 1.07
+  maxScreenXPositionInUnit: 6.93
