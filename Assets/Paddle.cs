@@ -1,19 +1,21 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
-    //This field gets serialized even though it is private
-    //because it has the SerializeField attribute applied.
-    [SerializeField] private float screenWidthInUnit  = 16f; 
+    [SerializeField] private float screenWidthInUnit  = 8f;
+    [SerializeField] private float minScreenXPositionInUnit = 1f;
+    [SerializeField] private float maxScreenXPositionInUnit = 7f;
 
     // Update is called once per frame
     void Update()
     {
         var mousePositionXInUnit = Input.mousePosition.x / Screen.width * screenWidthInUnit;
-        Debug.Log(mousePositionXInUnit);
-        Vector2 paddlePosition = new Vector2(mousePositionXInUnit,transform.position.y);
+        var position = transform.position;
+        Vector2 paddlePosition = new Vector2(position.y,position.y);
+        paddlePosition.x = Mathf.Clamp(mousePositionXInUnit, minScreenXPositionInUnit, maxScreenXPositionInUnit);
         transform.position = paddlePosition;
     }
 }
