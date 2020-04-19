@@ -381,6 +381,7 @@ GameObject:
   - component: {fileID: 662819327}
   - component: {fileID: 662819326}
   - component: {fileID: 662819325}
+  - component: {fileID: 662819329}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -483,12 +484,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662819324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.1200604, y: 9.83, z: 0}
+  m_LocalPosition: {x: 4, y: 0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &662819329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662819324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf8ca3eea8866c9448d95fc8e8c13ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paddle: {fileID: 2066114660}
 --- !u!1 &672246193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,7 +1211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066114655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 0.41, z: 0}
+  m_LocalPosition: {x: 4, y: 0.41, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1229,8 +1243,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 1.0668631, y: 0.046751022}
-      - {x: 0.5487709, y: 0.26832795}
-      - {x: -0.5512228, y: 0.26828802}
+      - {x: 0.8354831, y: 0.13994935}
+      - {x: -0.85077286, y: 0.13990942}
       - {x: -1.0658402, y: 0.047697097}
       - {x: -1.0666667, y: -0.26666668}
       - {x: 1.0666667, y: -0.26666668}
