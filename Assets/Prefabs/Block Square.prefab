@@ -122,3 +122,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: 1ca0947ff0ed4be47a5d02f2f142ebca, type: 3}
+  blockScoreValue: 50
