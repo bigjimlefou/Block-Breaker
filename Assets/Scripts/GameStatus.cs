@@ -15,7 +15,9 @@ public class GameStatus : MonoBehaviour
         var gameStatusCount = FindObjectsOfType<GameStatus>().Length;
         if (gameStatusCount > 1)
         {
+            // 71. Singleton Pattern Bug Fix
             gameObject.SetActive(false);
+            
             Destroy(gameObject);
         }
         else
