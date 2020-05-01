@@ -44,3 +44,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Asstets from asset store
+/Assets/Universal Sound FX/
+/Assets/Universal Sound FX.meta
+/Assets/Ultimate Game Music Collection/
+/Assets/Ultimate Game Music Collection.meta
