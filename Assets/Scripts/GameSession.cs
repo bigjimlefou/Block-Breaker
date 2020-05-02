@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class GameStatus : MonoBehaviour
+public class GameSession : MonoBehaviour
 {
     [SerializeField][Range(0.1f,2f)] private float timeScale = 1f;
     [SerializeField] private int score;
@@ -12,7 +12,7 @@ public class GameStatus : MonoBehaviour
 
     private void Awake()
     {
-        var gameStatusCount = FindObjectsOfType<GameStatus>().Length;
+        var gameStatusCount = FindObjectsOfType<GameSession>().Length;
         if (gameStatusCount > 1)
         {
             // 71. Singleton Pattern Bug Fix
