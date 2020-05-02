@@ -123,3 +123,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: 1ca0947ff0ed4be47a5d02f2f142ebca, type: 3}
   blockScoreValue: 50
+  blockSparkesVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
