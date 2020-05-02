@@ -1,10 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    private GameSession _gameSession;
+
+    private void Start()
+    {
+        _gameSession = FindObjectOfType<GameSession>();
+    }
+
     public void LoadNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -13,6 +21,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadStartScene()
     {
+        _gameSession.destroy();
         SceneManager.LoadScene(0);
     }
 

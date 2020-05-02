@@ -42,4 +42,9 @@ public class GameStatus : MonoBehaviour
         score += toAdd;
         scoreText.text = score.ToString();
     }
+
+    public void destroy()
+    {
+        Destroy(gameObject);
+    }
 }

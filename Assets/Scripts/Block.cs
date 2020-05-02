@@ -11,13 +11,13 @@ public class Block : MonoBehaviour
     private int blockScoreValue = 50;
     
     private Level level;
-    private GameStatus gameStatus;
+    private GameSession _gameSession;
     
     private void OnCollisionEnter2D(Collision2D collision2D)
     {
         AudioSource.PlayClipAtPoint(collisionSound, Camera.main.transform.position);
         level.decrementBlocksCounter();
-        gameStatus.addToScore(blockScoreValue);
+        _gameSession.addToScore(blockScoreValue);
         
         Destroy(gameObject);
     }
@@ -25,7 +25,7 @@ public class Block : MonoBehaviour
     private void Start()
     {
         level = FindObjectOfType<Level>();
-        gameStatus = FindObjectOfType<GameStatus>();
+        _gameSession = FindObjectOfType<GameSession>();
         
         level.incrementBlocksCounter();
     }
