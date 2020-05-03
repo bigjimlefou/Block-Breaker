@@ -12,19 +12,16 @@ public class Block : MonoBehaviour
     [SerializeField] private GameObject blockSparkesVFX;
 
     private Level level;
-    private GameSession _gameSession;
+    private GameSession gameSession;
 
     private void OnCollisionEnter2D(Collision2D collision2D)
     {
         AudioSource.PlayClipAtPoint(collisionSound, Camera.main.transform.position);
 
-        if (tag == "Unbreakable")
-        {
-        }
-        else if (tag == "Breakable")
+        if (CompareTag("Breakable"))
         {
             level.decrementBlocksCounter();
-            _gameSession.addToScore(blockScoreValue);
+            gameSession.addToScore(blockScoreValue);
             Destroy(gameObject);
             triggerSparkesVFX();
         }
@@ -32,19 +29,16 @@ public class Block : MonoBehaviour
 
     private void triggerSparkesVFX()
     {
-        var sparkelVFX = Instantiate(blockSparkesVFX, transform.position, transform.rotation);
-        Destroy(sparkelVFX, 1f);
+        var sparkelVfx = Instantiate(blockSparkesVFX, transform.position, transform.rotation);
+        Destroy(sparkelVfx, 1f);
     }
 
     private void Start()
     {
         level = FindObjectOfType<Level>();
-        _gameSession = FindObjectOfType<GameSession>();
+        gameSession = FindObjectOfType<GameSession>();
 
-        if (tag == "Unbreakable")
-        {
-        }
-        else if (tag == "Breakable")
+        if (CompareTag("Breakable"))
         {
             level.incrementBlocksCounter();
         }
