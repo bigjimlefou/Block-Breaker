@@ -125,7 +125,6 @@ MonoBehaviour:
   blockSparkesVfx: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
   blockBrokenSprites:
   - {fileID: 21300000, guid: 48d07a9f1ce11aa4f9a599ac6602b924, type: 3}
-  - {fileID: 21300000, guid: 583fb74f732687e41ac21246ad5b3866, type: 3}
   hitsToBreak: 2
   blockScoreValue: 100
   hits: 0

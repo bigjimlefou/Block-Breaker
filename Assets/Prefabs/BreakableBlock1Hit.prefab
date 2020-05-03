@@ -123,9 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: 1ca0947ff0ed4be47a5d02f2f142ebca, type: 3}
   blockSparkesVfx: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
-  blockBrokenSprites:
-  - {fileID: 21300000, guid: 48d07a9f1ce11aa4f9a599ac6602b924, type: 3}
-  - {fileID: 21300000, guid: 583fb74f732687e41ac21246ad5b3866, type: 3}
+  blockBrokenSprites: []
   hitsToBreak: 1
   blockScoreValue: 50
   hits: 0

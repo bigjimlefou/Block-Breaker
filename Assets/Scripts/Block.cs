@@ -45,7 +45,15 @@ public class Block : MonoBehaviour
     {
         if (hits <= blockBrokenSprites.Length)
         {
-            GetComponent<SpriteRenderer>().sprite = blockBrokenSprites[hits - 1];
+            var spriteIndex = hits - 1;
+            if (blockBrokenSprites[spriteIndex] != null)
+            {
+                GetComponent<SpriteRenderer>().sprite = blockBrokenSprites[spriteIndex];
+            }
+            else
+            {
+                Debug.Log("ShowNextHitSprite : Missing broken sprite index "+spriteIndex);
+            }
         }
     }
 
