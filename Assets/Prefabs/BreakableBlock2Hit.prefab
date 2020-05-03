@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2971464117017825388}
   - component: {fileID: 2971464117017825391}
   m_Layer: 0
-  m_Name: Block Square
+  m_Name: BreakableBlock2Hit
   m_TagString: Breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 90fb671bd1db31f43b3594059a48b00e, type: 3}
-  m_Color: {r: 0.45882356, g: 0.85098046, b: 0.7019608, a: 1}
+  m_Color: {r: 0.9490196, g: 0.78039217, b: 0.46666667, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -122,5 +122,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: 1ca0947ff0ed4be47a5d02f2f142ebca, type: 3}
-  blockScoreValue: 50
-  blockSparkesVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
+  blockSparkesVfx: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
+  blockBrokenSprites:
+  - {fileID: 21300000, guid: 48d07a9f1ce11aa4f9a599ac6602b924, type: 3}
+  - {fileID: 21300000, guid: 583fb74f732687e41ac21246ad5b3866, type: 3}
+  hitsToBreak: 2
+  blockScoreValue: 100
+  hits: 0

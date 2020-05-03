@@ -16,9 +16,10 @@ public class GameSession : MonoBehaviour
         if (gameStatusCount > 1)
         {
             // 71. Singleton Pattern Bug Fix
-            gameObject.SetActive(false);
+            GameObject o;
+            (o = gameObject).SetActive(false);
             
-            Destroy(gameObject);
+            Destroy(o);
         }
         else
         {
@@ -37,13 +38,13 @@ public class GameSession : MonoBehaviour
         Time.timeScale = timeScale;
     }
     
-    public void addToScore(int toAdd)
+    public void AddToScore(int toAdd)
     {
         score += toAdd;
         scoreText.text = score.ToString();
     }
 
-    public void destroy()
+    public void Destroy()
     {
         Destroy(gameObject);
     }

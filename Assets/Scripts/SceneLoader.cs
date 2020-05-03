@@ -21,7 +21,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadStartScene()
     {
-        _gameSession.destroy();
+        _gameSession.Destroy();
         SceneManager.LoadScene(0);
     }
 

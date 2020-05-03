@@ -8,18 +8,18 @@ public class Level : MonoBehaviour
 
     private SceneLoader sceneLoader;
 
-    public void incrementBlocksCounter()
+    public void IncrementBlocksCounter()
     {
         blocksCounter++;
     }
-    public void decrementBlocksCounter()
+    public void DecrementBlocksCounter()
     {
         blocksCounter--;
 
-        checkWinConditions();
+        CheckWinConditions();
     }
 
-    private void checkWinConditions()
+    private void CheckWinConditions()
     {
         if (blocksCounter <= 0)
         {
