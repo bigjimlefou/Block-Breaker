@@ -135,12 +135,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddle: {fileID: 0}
-  launchVelocity: {x: 2, y: 10}
   sounds:
   - {fileID: 8300000, guid: 04057de76858daa439d9b1ab2dfe5410, type: 3}
   - {fileID: 8300000, guid: 55a26bab19212784497ce2e7b76d491f, type: 3}
   - {fileID: 8300000, guid: bc0017f0de3e5ca4ea03e2c83d86841f, type: 3}
   - {fileID: 8300000, guid: 167d70d1f9a15af4faee3404e5749134, type: 3}
+  launchVelocity: {x: 2, y: 10}
+  ramdomFactor: 0.5
 --- !u!82 &209322314
 AudioSource:
   m_ObjectHideFlags: 0
