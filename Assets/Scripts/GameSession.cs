@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using TMPro;
+using UnityEngine.Serialization;
 
 public class GameSession : MonoBehaviour
 {
-    [SerializeField][Range(0.1f,2f)] private float timeScale = 1f;
+    [SerializeField][Range(0.1f,10f)] private float timeScale = 1f;
     [SerializeField] private int score;
     [SerializeField] private TextMeshProUGUI scoreText;
+    [FormerlySerializedAs("isAutoPlayEnabled")] [SerializeField] private bool autoPlay;
+
+    public bool AutoPlay => autoPlay;
 
     private void Awake()
     {

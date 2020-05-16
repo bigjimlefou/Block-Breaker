@@ -8,32 +8,32 @@ public class Ball : MonoBehaviour
 
     [SerializeField] private AudioClip[] sounds;
 
-    private AudioSource audioSource;
-    private Rigidbody2D rigidbody2D;
+    private AudioSource _audioSource;
+    private Rigidbody2D _rigidbody2D;
 
     [SerializeField] private Vector2 launchVelocity = new Vector2(2f, 10f);
     [SerializeField] private float ramdomFactor = 0.2f;
 
-    private Vector2 paddleToBallVector;
-    private bool ballLaunched = false;
+    private Vector2 _paddleToBallVector;
+    private bool _ballLaunched = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        paddleToBallVector = transform.position - paddle.transform.position;
-        audioSource = GetComponent<AudioSource>();
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        _paddleToBallVector = transform.position - paddle.transform.position;
+        _audioSource = GetComponent<AudioSource>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!ballLaunched)
+        if (!_ballLaunched)
         {
             if (Input.GetMouseButtonDown(0))
             {
-                ballLaunched = true;
+                _ballLaunched = true;
                 LaunchBallOnMouseClick();
             }
             else
@@ -48,24 +48,24 @@ public class Ball : MonoBehaviour
 
     private void LaunchBallOnMouseClick()
     {
-        rigidbody2D.velocity = launchVelocity;
+        _rigidbody2D.velocity = launchVelocity;
     }
 
     void LockBallToPaddle()
     {
         var position = paddle.transform.position;
         Vector2 paddlePosition = new Vector2(position.x, position.y);
-        transform.position = paddlePosition + paddleToBallVector;
+        transform.position = paddlePosition + _paddleToBallVector;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         Vector2 velocityTweak = new Vector2(Range(0f, ramdomFactor), Range(0f, ramdomFactor));
-        if (ballLaunched)
+        if (_ballLaunched)
         {
             AudioClip audioClip = sounds[(int) Range(0, sounds.Length)];
-            audioSource.PlayOneShot(audioClip);
-            rigidbody2D.velocity += velocityTweak;
+            _audioSource.PlayOneShot(audioClip);
+            _rigidbody2D.velocity += velocityTweak;
         }
     }
 }
